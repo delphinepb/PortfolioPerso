@@ -309,7 +309,7 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <div className="bg-gradient-to-br from-blue-100 to-indigo-200 rounded-2xl p-8 h-80 flex items-center justify-center">
-                <div className="text-6xl">👨‍💻</div>
+                <div className="text-6xl">👩🏻‍🦰</div>
               </div>
             </motion.div>
 
@@ -326,10 +326,12 @@ export default function Home() {
               </p>
               <p className="text-gray-600 leading-relaxed">
                 I enjoy taking on new challenges and continually learning to stay at the forefront of innovation.              </p>
-              <Button variant="outline" className="mt-4">
-                <Download className="mr-2 h-4 w-4" />
-                Download CV
-              </Button>
+                <a href="/CV_Delphine-BOITELLE_Dev.pdf" download>
+                  <Button variant="outline" className="mt-4">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download CV
+                  </Button>
+                </a>
             </motion.div>
           </div>
         </div>
@@ -368,7 +370,7 @@ export default function Home() {
               {
                 title: "Badken",
                 description: "Website for photographer",
-                image: "/",
+                image: "/bk.png",
                 tech: ["Next.js", "Framer Motion", "TypeScript"],
               },
             ].map((project, index) => (
@@ -386,17 +388,7 @@ export default function Home() {
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-2">
-                          <Button size="sm" variant="secondary">
-                            <Github className="h-4 w-4" />
-                          </Button>
-                          <Button size="sm" variant="secondary">
-                            <ExternalLink className="h-4 w-4" />
-                          </Button>
-                        </div>
-                      </div>
+                      />s
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
@@ -435,9 +427,9 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: Code, title: "Frontend", skills: ["NextJs", "Angular", "TypeScript", "Tailwind CSS"] },
+              { icon: Code, title: "Frontend", skills: ["NextJs", "ReactJs", "TypeScript", "Tailwind CSS"] },
               { icon: Globe, title: "Backend", skills: ["Node.js", "Java",".Net", "PostgreSQL"] },
-              { icon: Palette, title: "Tools", skills: ["GitLab", ""] },
+              { icon: Palette, title: "Tools", skills: ["Intellij IDEA", "Eclipse", "Git", "Docker", "Jira/Trello"] },
             ].map((category, index) => (
               <motion.div
                 key={index}
