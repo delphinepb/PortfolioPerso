@@ -7,11 +7,9 @@ import {
   Github,
   Linkedin,
   Mail,
-  ExternalLink,
   Download,
   Code,
   Palette,
-  Smartphone,
   Globe,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -174,7 +172,7 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                Hey, I'm Delphine
+                Hey, I&apos;m Delphine
               </motion.span>
               <motion.span
                 className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
@@ -321,7 +319,7 @@ export default function Home() {
               className="space-y-6"
             >
               <p className="text-gray-600 leading-relaxed">
-                With over 3 years of work-study experience in web development, I'm looking for a company
+                With over 3 years of work-study experience in web development, I&apos;m looking for a company
                 to grow and contribute to exciting projects.
               </p>
               <p className="text-gray-600 leading-relaxed">
