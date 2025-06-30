@@ -370,7 +370,7 @@ export default function Home() {
               {
                 title: "Badken",
                 description: "Website for photographer",
-                image: "/bk.png",
+                image: "/bk.jpeg",
                 tech: ["Next.js", "Framer Motion", "TypeScript"],
               },
             ].map((project, index) => (
@@ -388,7 +388,7 @@ export default function Home() {
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />s
+                      />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
@@ -466,47 +466,50 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact me</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              If you have any questions, please contact me.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
             className="bg-white rounded-2xl p-8 shadow-lg"
           >
+            <h2 className=" text-center text-4xl font-bold text-gray-900 mb-4">Contact me</h2>
+            <p className="text-center mb-16 text-gray-600 max-w-2xl mx-auto">
+              If you have any questions, please contact me.
+            </p>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <motion.div whileHover={{ scale: 1.05 }} className="space-y-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                  <Mail className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">Email</h3>
-                <p className="text-gray-600">delphine@boitelleparsy.com</p>
+                <a
+                  href="mailto:delphine@boitelleparsy.com"
+                  className="block"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                    <Mail className="h-6 w-6 text-blue-600" />
+                  </div>
+                </a>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} className="space-y-3">
+                <a
+                  href="https://www.linkedin.com/in/delphine-boitelle-2656a1217/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                    <Linkedin className="h-6 w-6 text-blue-600" />
+                  </div>
+                </a>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} className="space-y-3">
+                <a
+                  href="https://github.com/delphinepb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                    <Github className="h-6 w-6 text-blue-600" />
+                  </div>
+                </a>
               </motion.div>
 
-              <motion.div whileHover={{ scale: 1.05 }} className="space-y-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                  <Linkedin className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">LinkedIn</h3>
-                <p className="text-gray-600">https://www.linkedin.com/in/delphine-boitelle-2656a1217/</p>
-              </motion.div>
-
-              <motion.div whileHover={{ scale: 1.05 }} className="space-y-3">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
-                  <Github className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="font-semibold text-gray-900">GitHub</h3>
-                <p className="text-gray-600">https://github.com/delphinepb</p>
-              </motion.div>
             </div>
 
             <motion.div
